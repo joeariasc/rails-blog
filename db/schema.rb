@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_08_11_154411) do
+ActiveRecord::Schema[8.1].define(version: 2026_08_12_162436) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
   create_table "blog_posts", force: :cascade do |t|
     t.text "body"
     t.datetime "created_at", null: false
+    t.datetime "published_at"
     t.string "title"
     t.datetime "updated_at", null: false
   end
