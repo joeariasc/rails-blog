@@ -1,9 +1,16 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  body: MyText
+draft:
+  title: Draft Post
+  body: This post has no published date yet.
+  published_at: ~
 
-two:
-  title: MyString
-  body: MyText
+published:
+  title: Published Post
+  body: This post is already live.
+  published_at: <%= 1.day.ago %>
+
+scheduled:
+  title: Scheduled Post
+  body: This post will go live in the future.
+  published_at: <%= 1.day.from_now %>
